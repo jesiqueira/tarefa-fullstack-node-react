@@ -37,7 +37,8 @@ export default [
       // O globals.node foi movido para o bloco 0 e é aplicado globalmente
       parser: typescriptParser,
       parserOptions: {
-        project: './tsconfig.json',
+        // project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
       },
     },
     plugins: {

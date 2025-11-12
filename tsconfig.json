@@ -9,7 +9,7 @@
     "module": "CommonJS",
     "target": "ES2022",
     "lib": ["ES2022"],
-    "types": ["node", "express", "jest", "sequelize"], // Adiciona tipagens que você instalou
+    "types": ["node", "express", "jest", "sequelize"],
     "esModuleInterop": true,
 
     /* Stricter Typechecking Options */
@@ -23,15 +23,6 @@
     "sourceMap": true, // Útil para debug
     "declaration": true // Gera arquivos .d.ts
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts",
-    "node_modules",
-    "dist",
-    "__tests__",
-    "coverage"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts", "node_modules", "dist", "__tests__", "coverage"]
 }

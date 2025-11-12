@@ -9,6 +9,10 @@
     // Garante que o ESLint possa ver todos os arquivos
     "noEmit": true
   },
+
+  // Inclui também os testes para análise do ESLint
+  "include": ["src/**/*", "__tests__/**/*"],
+
   // Remove as exclusões para que o ESLint possa analisar os arquivos de teste
   "exclude": []
 }

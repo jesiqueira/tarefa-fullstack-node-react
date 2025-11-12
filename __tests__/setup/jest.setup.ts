@@ -1,5 +1,5 @@
 /**
- * __tests__/setup/jest.setup.ts
+ * src/tests/jest.setup.ts
  * Setup global do Jest
  */
 import dotenv from 'dotenv'
