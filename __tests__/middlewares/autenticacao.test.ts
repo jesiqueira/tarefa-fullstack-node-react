@@ -6,7 +6,7 @@ import { autenticar } from '../../src/middlewares/autenticacao'
 import { verificarToken, extrairTokenDoHeader } from '../../src/utils/jwt'
 
 // Mock das funções do JWT
-jest.mock('../../utils/jwt', () => ({
+jest.mock('../../src/utils/jwt', () => ({
   verificarToken: jest.fn(),
   extrairTokenDoHeader: jest.fn(),
 }))
