@@ -1,4 +1,4 @@
-import { Button } from '../components/ui/Button'
+import { Button } from '../views/components/ui/Button'
 
 export function Home() {
   return (

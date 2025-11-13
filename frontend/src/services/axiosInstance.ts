@@ -1,10 +1,10 @@
-// src/services/api.ts
+// src/services/axiosinstance.ts
 
 import axios from 'axios'
 
 // A URL VITE_API_URL é injetada no container frontend pelo docker-compose.yml
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://jsonplaceholder.typicode.com',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/api',
 })
 
 // Interceptor de Request: Adiciona o token de autenticação

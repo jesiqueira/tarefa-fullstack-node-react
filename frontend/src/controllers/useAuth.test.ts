@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react'
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest'
-import { useAuth } from './useAuth'
+import { useAuth } from './useAuth_old'
 
 // 1. Mock do Axios (nosso cliente 'api')
 const mockPost = vi.fn()

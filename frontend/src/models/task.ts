@@ -1,4 +1,4 @@
-// src/types/task.ts
+// src/models/task.ts
 
 /**
  * Tipos de Status de Tarefa

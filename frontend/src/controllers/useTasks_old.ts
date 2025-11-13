@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import api from '../services/api'
+import api from '../services/axiosInstance'
 import type { Tarefa, TaskStatus, ApiResponse, Paginacao, type Usuario } from '../types'
 
 interface TaskHook {
