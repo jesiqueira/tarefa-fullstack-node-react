@@ -1,9 +1,9 @@
-import React from 'react';
-import type { User } from '@/types';
+import React from 'react'
+import type { User } from '@/types'
 
 interface HeaderProps {
-  user: User;
-  onLogout: () => void;
+  user: User
+  onLogout: () => void
 }
 
 export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
@@ -14,15 +14,12 @@ export const Header: React.FC<HeaderProps> = ({ user, onLogout }) => {
           <h1 className="text-2xl font-bold text-gray-900">TaskFlow</h1>
           <div className="flex items-center gap-4">
             <span className="text-gray-700">Olá, {user.nome}</span>
-            <button
-              onClick={onLogout}
-              className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors"
-            >
+            <button onClick={onLogout} className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition-colors">
               Sair
             </button>
           </div>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

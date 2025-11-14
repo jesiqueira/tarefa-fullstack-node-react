@@ -1,8 +1,8 @@
-import React from 'react';
-import { User } from '@/types';
+import React from 'react'
+import type { User } from '@/types'
 
 interface UserProfileProps {
-  user: User;
+  user: User
 }
 
 export const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
@@ -20,11 +20,9 @@ export const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
         </div>
         <div>
           <label className="text-sm font-medium text-gray-500">Membro desde</label>
-          <p className="text-gray-900">
-            {new Date(user.createdAt).toLocaleDateString('pt-BR')}
-          </p>
+          <p className="text-gray-900">{new Date(user.createdAt).toLocaleDateString('pt-BR')}</p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
