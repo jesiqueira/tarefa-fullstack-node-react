@@ -1,15 +1,19 @@
-import React from 'react';
-import { useAuth } from '@/features/auth/hooks/useAuth';
-import { useTasks } from '@/features/tasks/hooks/useTasks';
-import { TaskManager } from '@/features/tasks/components/TaskManager';
+import React from 'react'
+import { useAuth } from '@/features/auth/hooks/useAuth'
+import { useTasks } from '@/features/tasks/hooks/useTasks'
+import { TaskManager } from '@/features/tasks/components/TaskManager'
 
 export const TasksPage: React.FC = () => {
-  const { user, logout } = useAuth();
-  const { tasks, isLoading, createTask, updateTaskStatus, deleteTask } = useTasks();
+  const { user, logout } = useAuth()
+  const { tasks, isLoading, createTask, updateTaskStatus, deleteTask } = useTasks()
+
+  if (!user) {
+    return <div>Carregando usuário...</div>
+  }
 
   return (
     <TaskManager
-      user={user!}
+      user={user}
       tasks={tasks}
       isLoading={isLoading}
       onLogout={logout}
@@ -17,5 +21,5 @@ export const TasksPage: React.FC = () => {
       onUpdateTaskStatus={updateTaskStatus}
       onDeleteTask={deleteTask}
     />
-  );
-};
+  )
+}
