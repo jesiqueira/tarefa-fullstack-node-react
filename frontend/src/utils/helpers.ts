@@ -1,7 +1,8 @@
-export function formatDate(date: string | Date): string {
-  return new Date(date).toLocaleDateString('pt-BR')
-}
+export const formatDate = (dateString: string): string => {
+  return new Date(dateString).toLocaleDateString('pt-BR');
+};
 
-export function capitalize(text: string): string {
-  return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-}
+export const truncateText = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength) + '...';
+};

@@ -7,7 +7,7 @@ src/
   controllers/     # Hooks (equivalente ao seu "hooks")
   views/
     components/    # Componentes reutilizáveis
-    pages/         # Páginas principais
+    pages ou layuts/         # Páginas principais
 ```
 
 ✅ Como separar responsabilidades (MVC adaptado para React)
@@ -92,4 +92,106 @@ src/
     userService.ts    # Métodos relacionados a usuário
     taskService.ts    # Métodos relacionados a tarefas
 
+```
+```text
+taskflow-frontend/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── features/
+│   │   ├── auth/
+│   │   │   ├── components/
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   └── UserProfile.tsx
+│   │   │   ├── hooks/
+│   │   │   │   └── useAuth.ts
+│   │   │   ├── services/
+│   │   │   │   └── authService.ts
+│   │   │   ├── types/
+│   │   │   │   └── index.ts
+│   │   │   └── api/
+│   │   │       └── authAPI.ts
+│   │   └── tasks/
+│   │       ├── components/
+│   │       │   ├── TaskForm.tsx
+│   │       │   ├── TaskItem.tsx
+│   │       │   ├── TaskList.tsx
+│   │       │   └── TaskManager.tsx
+│   │       ├── hooks/
+│   │       │   └── useTasks.ts
+│   │       ├── services/
+│   │       │   └── taskService.ts
+│   │       ├── types/
+│   │       │   └── index.ts
+│   │       ├── api/
+│   │       │   └── tasksAPI.ts
+│   │       └── constants/
+│   │           └── statusMap.ts
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── Button/
+│   │   │   │   ├── Button.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── Input/
+│   │   │   │   ├── Input.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── LoadingSpinner/
+│   │   │   │   ├── LoadingSpinner.tsx
+│   │   │   │   └── index.ts
+│   │   │   └── index.ts
+│   │   └── layout/
+│   │       ├── Header.tsx
+│   │       ├── Sidebar.tsx
+│   │       └── PageContainer.tsx
+│   ├── pages/
+│   │   ├── LoginPage.tsx
+│   │   ├── RegisterPage.tsx
+│   │   ├── DashboardPage.tsx
+│   │   └── TasksPage.tsx
+│   ├── lib/
+│   │   ├── axios.ts
+│   │   ├── queryClient.ts
+│   │   └── constants.ts
+│   ├── stores/
+│   │   └── authStore.ts
+│   ├── types/
+│   │   └── index.ts
+│   ├── utils/
+│   │   ├── helpers.ts
+│   │   └── formatters.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── index.html
+├── package.json
+├── vite.config.ts
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+└── .env
+```
+
+```text
+taskflow-frontend/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── features/           # Funcionalidades
+│   ├── components/         # Componentes UI
+│   ├── pages/             # Páginas/Rotas
+│   ├── lib/               # Configurações
+│   ├── stores/            # Estado global
+│   ├── types/             # Tipos TypeScript
+│   ├── utils/             # Utilitários
+│   ├── __tests__/         # Testes
+│   ├── App.tsx            # ✅ NOVO
+│   ├── main.tsx           # ✅ NOVO
+│   └── index.css          # ✅ NOVO
+├── index.html             # ✅ NOVO
+├── package.json
+├── vite.config.ts         # ✅ NOVO
+├── tailwind.config.js     # ✅ NOVO
+├── tsconfig.json
+├── tsconfig.node.json
+└── .env
 ```
